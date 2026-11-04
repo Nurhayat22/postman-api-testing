@@ -48,6 +48,14 @@ Result of running the whole collection with the Collection Runner: **7 tests pas
 - Positive and negative test scenarios
 - Running a collection with the Collection Runner
 
+- ## Manual test cases
+
+Besides API testing, this repository includes manual test cases for the login page of the SauceDemo practice website (https://www.saucedemo.com):
+
+- File: `SauceDemo_Login_Test_Cases.pdf` (5 test cases)
+- Covered scenarios: valid login, wrong password, empty username, empty password, locked-out user
+- Each test case contains: ID, name, precondition, steps, test data, expected result, actual result, and status
+
 ## Notes
 
 JSONPlaceholder is a fake API: it returns realistic responses but does not actually save or delete data. For example, a post created with POST cannot be fetched afterwards with GET. This is expected behavior for this API and is not treated as a bug.
