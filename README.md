@@ -56,6 +56,19 @@ Besides API testing, this repository includes manual test cases for the login pa
 - Covered scenarios: valid login, wrong password, empty username, empty password, locked-out user
 - Each test case contains: ID, name, precondition, steps, test data, expected result, actual result, and status
 
+## Bug reports
+
+While testing the SauceDemo practice website with the `problem_user` account, I found and documented 5 bugs:
+
+- File: `SauceDemo_Bug_Reports.pdf`
+- BUG-01: All products show the same image on the Products page
+- BUG-02: Clicking a product opens the details page of a different product
+- BUG-03: "Add to cart" button does not work on the product details page
+- BUG-04: Sorting dropdown does not change the product order
+- BUG-05: Text typed in the Last Name field goes to the First Name field on the checkout form
+
+Each bug report contains: title, environment, precondition, steps to reproduce, expected result, actual result, severity, and screenshots.
+
 ## Notes
 
 JSONPlaceholder is a fake API: it returns realistic responses but does not actually save or delete data. For example, a post created with POST cannot be fetched afterwards with GET. This is expected behavior for this API and is not treated as a bug.
