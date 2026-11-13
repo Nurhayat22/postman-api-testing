@@ -1,10 +1,19 @@
-# Postman API Testing: JSONPlaceholder
+# QA Practice Projects: API Testing and Manual Testing
 
-A beginner QA practice project where I tested a REST API with Postman. I sent GET, POST, and DELETE requests, checked status codes and JSON responses, and wrote automated tests for each request.
+Beginner QA practice projects:
+
+1. **API testing with Postman:** tested the JSONPlaceholder REST API (GET, POST, DELETE), checked status codes and JSON responses, and wrote automated tests.
+2. **Manual testing:** wrote test cases for the SauceDemo login page and documented 5 bugs found with the `problem_user` account.
+
+---
+
+## Project 1: API testing with Postman
+
+I sent GET, POST, and DELETE requests to a REST API, checked status codes and JSON responses, and wrote automated tests for each request.
 
 **API under test:** [JSONPlaceholder](https://jsonplaceholder.typicode.com), a free fake REST API for testing and learning.
 
-## What I tested
+### What I tested
 
 | ID | Request | Expected result | Status |
 |----|---------|-----------------|--------|
@@ -15,7 +24,7 @@ A beginner QA practice project where I tested a REST API with Postman. I sent GE
 
 Both positive cases (valid request) and a negative case (non-existent resource) are covered.
 
-## Automated tests
+### Automated tests
 
 Each request has tests written in the Postman **Scripts → After response** tab, for example:
 
@@ -32,33 +41,28 @@ pm.test("Response has id = 1", function () {
 
 Result of running the whole collection with the Collection Runner: **7 tests passed, 0 failed.**
 
-## How to run
+### How to run
 
 1. Install [Postman](https://www.postman.com/downloads/).
 2. Download the collection file (`JSONPlaceholder API Tests.postman_collection.json`) from this repository.
 3. In Postman click **Import** and select the file.
 4. Right-click the collection and choose **Run collection**.
 
-## What I practiced
+---
 
-- REST API basics and HTTP methods (GET, POST, DELETE)
-- HTTP status codes (200, 201, 404)
-- Reading and writing JSON
-- Writing automated tests in Postman (`pm.test`, `pm.expect`)
-- Positive and negative test scenarios
-- Running a collection with the Collection Runner
+## Project 2: Manual testing of SauceDemo
 
-- ## Manual test cases
+[SauceDemo](https://www.saucedemo.com) is a practice website made for learning QA. I tested its login page and the Products and checkout pages.
 
-Besides API testing, this repository includes manual test cases for the login page of the SauceDemo practice website (https://www.saucedemo.com):
+### Manual test cases
 
 - File: `SauceDemo_Login_Test_Cases.pdf` (5 test cases)
 - Covered scenarios: valid login, wrong password, empty username, empty password, locked-out user
 - Each test case contains: ID, name, precondition, steps, test data, expected result, actual result, and status
 
-## Bug reports
+### Bug reports
 
-While testing the SauceDemo practice website with the `problem_user` account, I found and documented 5 bugs:
+While testing with the `problem_user` account, I found and documented 5 bugs:
 
 - File: `SauceDemo_Bug_Reports.pdf`
 - BUG-01: All products show the same image on the Products page
@@ -69,9 +73,23 @@ While testing the SauceDemo practice website with the `problem_user` account, I 
 
 Each bug report contains: title, environment, precondition, steps to reproduce, expected result, actual result, severity, and screenshots.
 
+---
+
+## What I practiced
+
+- REST API basics and HTTP methods (GET, POST, DELETE)
+- HTTP status codes (200, 201, 404)
+- Reading and writing JSON
+- Writing automated tests in Postman (`pm.test`, `pm.expect`)
+- Positive and negative test scenarios
+- Running a collection with the Collection Runner
+- Writing manual test cases (steps, test data, expected and actual results)
+- Writing bug reports with severity and screenshots
+
 ## Notes
 
-JSONPlaceholder is a fake API: it returns realistic responses but does not actually save or delete data. For example, a post created with POST cannot be fetched afterwards with GET. This is expected behavior for this API and is not treated as a bug.
+- JSONPlaceholder is a fake API: it returns realistic responses but does not actually save or delete data. For example, a post created with POST cannot be fetched afterwards with GET. This is expected behavior for this API and is not treated as a bug.
+- SauceDemo is a practice website. The `problem_user` account contains intentionally planted bugs for testing practice.
 
 ## Author
 
